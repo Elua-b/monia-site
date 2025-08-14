@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -34,33 +34,33 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-8 relative overflow-hidden">
+    <section id="faq" className="py-12 sm:py-16 md:py-20 relative overflow-hidden" style={{ backgroundColor: '#4B4038' }}>
       <div className="max-w-5xl mx-auto px-4">
-        <div className="bg-cream-50/95 backdrop-blur-sm rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-500 border border-warm-200 relative z-10">
-          <h2 className="text-3xl font-bold text-stone-800 mb-8 text-center uppercase tracking-wide">
+        <div className="bg-stone-800/90 backdrop-blur-sm rounded-3xl p-8 sm:p-10 lg:p-12 shadow-2xl border border-stone-700/50 relative z-10">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-100 mb-8 text-center uppercase tracking-wide">
             Frequently Asked Questions
           </h2>
           
           <div className="space-y-4 mb-8">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-warm-200 rounded-2xl">
+              <div key={index} className="border border-stone-700/50 rounded-2xl">
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full p-6 text-left flex items-center justify-between focus:outline-none"
                 >
-                  <span className="text-lg font-semibold text-stone-800">
+                  <span className="text-lg sm:text-xl font-semibold text-stone-200">
                     {faq.question}
                   </span>
                   {openFAQ === index ? (
-                    <ChevronUp className="h-5 w-5 text-stone-800" />
+                    <ChevronUp className="h-5 w-5 text-stone-200" />
                   ) : (
-                    <ChevronDown className="h-5 w-5 text-stone-800" />
+                    <ChevronDown className="h-5 w-5 text-stone-200" />
                   )}
                 </button>
                 
                 {openFAQ === index && (
                   <div className="px-6 pb-6">
-                    <p className="text-stone-600 leading-relaxed">
+                    <p className="text-stone-300 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -69,23 +69,23 @@ const FAQ = () => {
             ))}
           </div>
 
-          <div className="text-center bg-gray-50 rounded-2xl p-6">
-            <h3 className="text-xl font-bold text-stone-800 mb-4">
+          <div className="text-center bg-stone-700/80 rounded-2xl p-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-stone-100 mb-4">
               Still Have Questions?
             </h3>
-            <p className="text-stone-600 mb-4">
+            <p className="text-stone-300 mb-4">
               Please don't hesitate to reach out to us for any additional information.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-6">
               <a
                 href="mailto:moniacourcele@gmail.com"
-                className="text-warm-700 hover:text-warm-600 transition-colors font-medium"
+                className="text-gold-300 hover:text-gold-200 transition-colors font-medium"
               >
                 moniacourcele@gmail.com
               </a>
               <a
                 href="tel:+4520465296"
-                className="text-warm-700 hover:text-warm-600 transition-colors font-medium"
+                className="text-gold-300 hover:text-gold-200 transition-colors font-medium"
               >
                 +45 20 46 52 96
               </a>
